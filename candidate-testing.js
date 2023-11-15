@@ -1,14 +1,27 @@
 const input = require('readline-sync');
 
+let name = input.question("Please enter your name: ");
+console.log("Hello, " + name + "! Let's start the quiz!")
+
 // TODO 2: modify your quiz app to ask 5 questions //
 
 // TODO 1.1a: Define candidateName // 
-let candidateName;
-// TODO 1.2a: Define question, correctAnswer, and candidateAnswer //
-let question;
-let correctAnswer;
-let candidateAnswer;
+let candidateName = name;
+//console.log(candidateName);
 
+// TODO 1.2a: Define question, correctAnswer, and candidateAnswer //
+let question = "What is the meaning of life and existence?" + "\n A. Love,\n B. There is no meaning. \n C. 42";
+//ask user question first
+console.log(question)
+let correctAnswer = "C"
+let candidateAnswer = input.question("What is your answer? ");
+//playing with conditionals//
+
+if (candidateAnswer === correctAnswer) {
+  console.log ("That is correct");
+}else {
+  console.log("Wrong!");
+}
 
 //TODO: Variables for Part 2
 let questions;

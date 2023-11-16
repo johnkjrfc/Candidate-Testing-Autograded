@@ -1,21 +1,19 @@
 const input = require('readline-sync');
 
-let name = input.question("Please enter your name: ");
-console.log("Hello, " + name + "! Let's start the quiz!")
+
+
 
 // TODO 2: modify your quiz app to ask 5 questions //
 
 // TODO 1.1a: Define candidateName // 
-let candidateName = name;
+let candidateName = ''
 //console.log(candidateName);
 
 // TODO 1.2a: Define question, correctAnswer, and candidateAnswer //
-let question = "What is the meaning of life and existence?" + "\n A. Love,\n B. There is no meaning. \n C. 42";
-//ask user question first
-console.log(question)
-let correctAnswer = "C"
-let candidateAnswer = input.question("What is your answer? ");
-//playing with conditionals//
+let question = "Who was the first American woman in space? ";
+let correctAnswer = "Sally Ride";
+let candidateAnswer = "";
+
 
 if (candidateAnswer === correctAnswer) {
   console.log ("That is correct");
@@ -31,12 +29,13 @@ let candidateAnswers;
 
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
-
+  candidateName = input.question("Please enter your name: ");
 }
 
 function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
 
+  console.log(question)
 
 }
 
@@ -55,7 +54,7 @@ function gradeQuiz(candidateAnswers) {
 function runProgram() {
   askForName();
   // TODO 1.1c: Greet candidate using their name //
-   console.log();
+   console.log(`Hello ${candidateName}!`);
   askQuestion();
   gradeQuiz(this.candidateAnswers);
 }

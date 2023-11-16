@@ -30,18 +30,18 @@ function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
   console.log(question)
   candidateAnswer = input.question("What is your answer?")
-  if (candidateAnswer === correctAnswer) {
-    console.log ("That is correct.");
-  }else {
-    console.log("Sorry, that is incorrect.");
-  }
+  
 
 }
 
 function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
-
+  if (candidateAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
+    console.log ("That is correct.");
+  }else {
+    console.log("Sorry, that is incorrect.");
+  }
 
 
   let grade;  //TODO 3.2 use this variable to calculate the candidates score.

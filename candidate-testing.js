@@ -15,12 +15,6 @@ let correctAnswer = "Sally Ride";
 let candidateAnswer = "";
 
 
-if (candidateAnswer === correctAnswer) {
-  console.log ("That is correct");
-}else {
-  console.log("Wrong!");
-}
-
 //TODO: Variables for Part 2
 let questions;
 let correctAnswers;
@@ -34,8 +28,13 @@ function askForName() {
 
 function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
-
   console.log(question)
+  candidateAnswer = input.question("What is your answer?")
+  if (candidateAnswer === correctAnswer) {
+    console.log ("That is correct.");
+  }else {
+    console.log("Sorry, that is incorrect.");
+  }
 
 }
 

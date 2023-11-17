@@ -49,8 +49,17 @@ function gradeQuiz(candidateAnswers) {
   for (let i = 0; i < candidateAnswers.length; i++) {
     console.log(`You answered, ${candidateAnswers[i]}.\nThe correct answer is ${correctAnswers[i]}` )
   }
+  let trueCount = 0          //defining varible which will store no. answers that match correctAnswers
+  for (let i = 0; i < candidateAnswers.length; i++) {
+    if (candidateAnswers.toLowercase(i) === correctAnswers.toLowercase(i)) {
+      count++;
+    } else {
+      
+    }
 
-  let grade = '';  //TODO 3.2 use this variable to calculate the candidates score.
+  }
+  
+  let grade = trueCount/candidateAnswers.length;  //TODO 3.2 use this variable to calculate the candidates score.
 
 
   return grade;
